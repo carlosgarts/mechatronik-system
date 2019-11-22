@@ -1,0 +1,28 @@
+<div class="container p-4">
+    <div class="page-header border-bottom border-gray">
+        <h1>Servicios</h1>
+    </div>
+    <a href="/servicios/add" class="btn btn-outline-dark btn-lg my-4" role="button">Nuevo</a>
+    <div class="row">
+        {{#each servicios}}
+            <div class="col-md-3 mb">
+                <div class="card text-center">
+                    <img src="{{fotos}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{titulo}}</h5>
+                        <p class="card-text">{{descripcion}}</p>
+                        <a href="#" onclick="confirmOpt('/servicios/delete/{{id}}')" class="btn btn-danger">Eliminar</a>
+                        <a href="/servicios/edit/{{id}}" class="btn btn-dark">Editar</a>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card- card-body text-center">
+                    <p>No hay servicios creadas aun</p>
+                    <a href="/servicios/add">Crear Una</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container p-4">
+    <div class="page-header border-bottom border-gray">
+        <h1>Categorias</h1>
+    </div>
+    <a href="/categorias/add" class="btn btn-outline-dark btn-lg my-4" role="button">Nueva</a>
+    <div class="row">
+        {{#each categorias}}
+            <div class="col-md-3 mb">
+                <div class="card text-center">
+                    <img src="{{imagen}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{titulo}}</h5>
+                        <p class="card-text">{{descripcion}}</p>
+                        <a href="#" onclick="confirmOpt('/categorias/delete/{{id}}')" class="btn btn-danger">Eliminar</a>
+                        <a href="/categorias/edit/{{id}}" class="btn btn-dark">Editar</a>
+                        <a href="/productos/categoria/{{id}}" class="btn btn-dark bmt">Productos</a>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card- card-body text-center">
+                    <p>No hay Categorias creadas aun</p>
+                    <a href="/categorias/add">Crear Una</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

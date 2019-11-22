@@ -1,0 +1,46 @@
+<div class="container p-4">
+    <div class="">
+        <div class="col-m-4 mx-auto">
+            <div class="card">
+                <div class="card-header bg-dark text-light">Agregar Producto</div>
+                <div class="card-body">
+                    <form action="/productos/edit/{{producto.id}}" method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" value="{{producto.nombre}}"  placeholder="Ejemplo" autofocus>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="modelo">Modelo</label>
+                                <input type="text" class="form-control" id="modelo" value="{{producto.modelo}}"  name="modelo" placeholder="001">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="descripcion">Descripcion</label>
+                                <textarea class="form-control" id="descripcion" name="descripcion"  placeholder="Descripcion mostrada en el sitio" rows="3">{{producto.descripcion}}</textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="especificaciones">Especificaciones</label>
+                                <textarea class="form-control" id="especificaciones" name="especificaciones" placeholder='"Fuerza": "20N", "Peso": "20kg"' rows="3">{{producto.especificaciones}}</textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="aplicaciones">Aplicaciones</label>
+                                <textarea class="form-control" id="aplicaciones" name="aplicaciones"  placeholder="Algunas aplicaciones" rows="3">{{producto.aplicaciones}}</textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="folleto">URL del Folleto</label>
+                                <input type="text" class="form-control" id="folleto" name="folleto" value="{{producto.folleto}}" placeholder="https://ejm.com/folleto.pdf">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="fotos">URL de Fotos</label>
+                                <textarea class="form-control" id="fotos" name="fotos" placeholder="URLs encerradas en comillas y separadas por comas dentro de corchetes ['https://ejm.com/foto1.jpg','https://ejm.com/foto2.jpg']" rows="3">{{producto.fotos}}</textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <button type="submit" class="btn btn-primary btn-block btn-dark">Actualizar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

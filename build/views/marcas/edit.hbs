@@ -1,0 +1,37 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-m-4 mx-auto">
+            <div class="card">
+                <div class="card-header bg-dark text-light">Agregar Marcas</div>
+                <div class="card-body">
+                    <form action="/marcas/edit/{{marca.id}}" method="POST">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="titulo">Nombre</label>
+                                <input type="text" value="{{marca.titulo}}" class="form-control" id="titulo" name="titulo" placeholder="Ejemplo"
+                                    autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion">Descripcion</label>
+                                <textarea class="form-control" id="descripcion" name="descripcion"
+                                    placeholder="Descripcion mostrada en el sitio" rows="3">{{marca.descripcion}}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="logo">URL del logo</label>
+                                <input type="text" value="{{marca.logo}}" class="form-control" id="logo" name="logo" placeholder="https://img.com/imagen.png">
+                            </div>
+                            <div class="form-group">
+                                <label for="imagen">URL de la images</label>
+                                <input type="text" value="{{marca.imagen}}" class="form-control" id="imagen" name="imagen"
+                                    placeholder="https://img.com/imagen.jpg">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block btn-dark">Actualizar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="container p-4">
+    <div class="">
+        <div class="col-m-4 mx-auto">
+            <div class="card">
+                <div class="card-header bg-dark text-light">Agregar Producto</div>
+                <div class="card-body">
+                    <form action="/productos/add" method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ejemplo" autofocus>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="modelo">Modelo</label>
+                                <input type="text" class="form-control" id="modelo" name="modelo" placeholder="001">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="descripcion">Descripcion</label>
+                                <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion mostrada en el sitio" rows="3"></textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="especificaciones">Especificaciones</label>
+                                <textarea class="form-control" id="especificaciones" name="especificaciones" placeholder='Fuerza;20N;Peso;20kg' rows="3"></textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="aplicaciones">Aplicaciones</label>
+                                <textarea class="form-control" id="aplicaciones" name="aplicaciones" placeholder="Algunas aplicaciones" rows="3"></textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="folleto">URL del Folleto</label>
+                                <input type="text" class="form-control" id="folleto" name="folleto" placeholder="https://ejm.com/folleto.pdf">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="fotos">URL de Fotos</label>
+                                <textarea class="form-control" id="fotos" name="fotos" placeholder="URLs separadas por espacios ejemplo: https://ejm.com/foto1.jpg https://ejm.com/foto2.jpg" rows="3"></textarea>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="marcas_id">Marca</label>
+                                <select class="form-control" id="marcas_id" name="marcas_id">
+                                    {{#each marcas}}
+                                    <option value="{{id}}">{{titulo}}</option>
+                                    {{else}}
+                                    <option value="0">No hay Marcas aun</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="categorias_id">Categoria</label>
+                                <select class="form-control" id="categorias_id" name="categorias_id">
+                                    {{#each categorias}}
+                                    <option value="{{id}}">{{titulo}}</option>
+                                    {{else}}
+                                    <option value="0">No hay categorias aun</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <button type="submit" class="btn btn-primary btn-block btn-dark">Agregar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
