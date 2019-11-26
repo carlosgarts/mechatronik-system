@@ -118,7 +118,8 @@ router.get('/mail/:sender', async (req, res) => {
     const mailgun = require("mailgun-js")({ apiKey: api_key, domain: DOMAIN });
     var data = {
         from: fromQuery,
-        to: 'info@mechatronikgroup.com',
+        //to: 'info@mechatronikgroup.com',
+        to: 'carlosgarts@gmail.com',
         subject: 'Mechatronik Site Customer',
         text: 'Estoy interesado en conseguir informacion a profundidad de mechatronik, sus servicios y-o productos, por favor responderme'
     };
